@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
@@ -27,7 +27,6 @@ public class Player : MonoBehaviour
     {
         _moveDirection.x = Input.GetAxis("Horizontal");
         _moveDirection.y = Input.GetAxis("Vertical");
-
     }
 
     private void Move()
